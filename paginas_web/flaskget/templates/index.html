@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORMULARIO GET/POST</title>
+    <link rel="stylesheet" href="{{  url_for('static', filename='css/style.css')  }}">
+</head>
+<body>
+    <h1>Formulario con post/get</h1>
+
+    <form>
+        <input type="text" id="nombre" placeholder="Nombre" required>
+        <input type="number" id="edad" placeholder="Edad" required>
+        <button type="submit">Enviar</button>
+    </form>
+
+    <p id="mensaje"></p>
+
+    <table id="tabla-personas">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Edad</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+
+    <button id="btn-limpiar">Borrar todo</button>
+
+    <script src="{{  url_for('static', filename='js/main.js')  }}"></script>
+</body>
+</html>

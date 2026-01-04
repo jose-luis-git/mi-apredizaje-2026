@@ -1,0 +1,79 @@
+body{
+    /*posicionamiento*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /*caja*/
+    /*nose que es caja en css(creo que es el tamaño que ocupa algo)*/
+    /*tipografia*/
+    font-family: arial;
+    font-size: 20px;
+    /*fondo*/
+    background: linear-gradient(120deg, limegreen,orange,yellow,lime);
+    background-size: 400% 400%;
+    /*efectos*/
+    animation:  mover 10s ease-in-out infinite;
+    /**interaciones nose que sera*/
+}
+h1{
+    color: solid black;
+}
+p{
+    text-decoration: underline;
+}
+input{
+    padding: 20px 50px;
+    font-family: arial;
+}
+button{
+    padding: 20px 30px;
+    border: none;
+    border-radius: 20px;
+    font-size: 10px;
+    font-family: arial;
+    background: linear-gradient(120deg, blue,purple,blue);
+    background-size: 400% 400%;
+    box-shadow: -3px 10px 15px rgba(0,0,0,0.8);
+    transition: 1s ease-in-out;
+    animation: mover 5s ease infinite;
+}
+button:hover{
+    transform: scale(1.1);
+}
+button:active{
+    transform: translate(2px);
+    box-shadow: 0 0 0;
+}
+#tabla-personas{
+    width: 80%;
+    margin: 30px auto;
+    border-collapse: collapse;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    font-family: Arial, sans-serif;
+}
+#tabla-personas th, #tabla-personas td{
+    padding: 15px;
+    text-align: center;
+    font-size: 16px;
+}
+#tabla-personas th{
+    background-color: #4CAF50;
+    color: white;
+}
+#tabla-personas tbody tr:nth-child(even){
+    background-color: #f2f2f2;
+}
+#tabla-personas tbody td:hover{
+    background-color: #d1e7dd;
+}
+#tabla-personas th{
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+@keyframes mover{
+    0%{background-position: 0% 50%;}
+    50%{background-position: 100% 50%;}
+    100%{background-position: 0% 50%;}
+}
