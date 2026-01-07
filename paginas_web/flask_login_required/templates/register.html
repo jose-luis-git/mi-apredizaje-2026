@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Record</title>
+</head>
+<body>
+    <h1>Record</h1>
+
+    <form>
+        <input type="text" id="username" placeholder="Username" required>
+        <input type="password" id="password" placeholder="Password" required>
+        <button type="submit">Send record</button>
+    </form>
+    
+    <p id="register_message"></p>
+
+
+    <script src="{{  url_for('static', filename='js/register.js')  }}"></script>
+</body>
+</html>
