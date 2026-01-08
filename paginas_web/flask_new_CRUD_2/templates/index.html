@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD 2.0</title>
+    <link rel="stylesheet" href="{{  url_for('static', filename='css/style.css')  }}">
+</head>
+<body>
+    <div id="wrapper">
+        <h1>Form</h1>
+
+        <form>
+            <input type="text" id="name" placeholder="Name" required>
+            <input type="number" id="age" placeholder="Age" required>
+            <input type="number" id="note" placeholder="Note" required>
+            <button type="submit" id="btn_send" class="btn">Send</button>
+            <button type="button" id="btn_cancel" class="btn" hidden>Cancel</button>
+        </form>
+
+        <p id="message"></p>
+        <p id="amount"></p>
+
+        <table id="table_person">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Note</th>
+                    <th>Action 1</th>
+                    <th>Action 2</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+        <div class="table_actions">
+            <button type="button" id="btn_clean" class="danger">Delete all people</button>
+        </div>
+    </div>
+
+    <button id="scrollTop">Up</button>
+
+    <script src="{{  url_for('static', filename='js/main.js')  }}"></script>
+</body>
+</html>
