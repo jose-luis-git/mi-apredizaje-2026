@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD</title>
+    <link rel="stylesheet" href="{{  url_for('static', filename='css/style.css')  }}">
+</head>
+<body>
+    <div class="wrapper">
+        <h1>CRUD</h1>
+        
+        <form>
+            <input type="text" id="name" placeholder="Name" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <button type="submit" id="btn_send">Send</button>
+            <button type="button" id="btn_cancel" hidden>Cancel</button>
+        </form>
+
+        <p id="message"></p>
+        <p id="amount"></p>
+
+        <table border="1" id="table_user"> 
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Action 1</th>
+                    <th>Action 2</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+        <div class="table_action">
+            <button type="button" id="btn_clean" class="danger">Delete all users</button>
+        </div>
+    </div>
+    <script src="{{  url_for('static', filename='js/script.js')  }}"></script>
+</body>
+</html>
