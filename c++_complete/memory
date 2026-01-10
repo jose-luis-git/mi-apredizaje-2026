@@ -1,0 +1,30 @@
+#include<iostream>
+#include<memory>
+
+class Longger{
+	private:
+		std::string phrase;
+	public:
+		Longger(const std::string&_phrase="Log opened"): phrase(_phrase){
+			std::cout<<phrase<<std::endl;
+		}
+		~Longger(){
+			std::cout<<"Log closed"<<std::endl;
+		}
+		void mostrar() const;
+};
+void Longger::mostrar() const{
+	std::cout<<"";
+}
+
+int main(){
+	{
+		std::unique_ptr<Longger> logger;
+		logger = std::make_unique<Longger>();
+		std::cout<<"Inside block"<<std::endl;
+	}
+	
+	std::cout<<"Program continue"<<std::endl;
+	
+	return 0;
+}
